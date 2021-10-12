@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@angular/common@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-12.2.3.tgz#deb11b2cc0e0e3056af4b0318098aecbc67fa561"
-  integrity sha512-AkOeknm35kzLqqh5dIz1143e3Q1MjWgi7THlY3StY63yphseQUUvGQSNHkDSIpfwBN8Mt+ZykKFjhY+cNFYt7w==
+"@angular/common@12.2.9":
+  version "12.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-12.2.9.tgz#8ccf16e1990c375fb9893a7b464002569900005a"
+  integrity sha512-V7leBrq80CSJWHWVE3LEL6Z6onP2ibsITY3++86Uddz8AxzfOtNRslbs4/qCWc82nT7CIEn8a28NLP/BdOwNew==
   dependencies:
     tslib "^2.2.0"
 
-"@angular/compiler-cli@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-12.2.3.tgz#77774b219276ef45b269743093a40166299b6da6"
-  integrity sha512-8yw13AqfRSY9YV4zb6PfuJizPa5/lh4DNbc6gQkw1Dmh/Af+U2bxrtZhQCgXWJAys1sd+PN/gTQOc7/YzDNVLQ==
+"@angular/compiler-cli@12.2.9":
+  version "12.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-12.2.9.tgz#a7c7292f5bb0324f374f978b9bd5ff34bc67d91a"
+  integrity sha512-jswNKFm3MNcY4oDO/8HcFLLVxDEcTOyqp9CeKzlbjBKb04Ntjaqpm9CKzlxLOtJJj9BSMHTz1CjE0hSNv76NPg==
   dependencies:
     "@babel/core" "^7.8.6"
     "@babel/types" "^7.8.6"
@@ -29,17 +29,17 @@
     tslib "^2.2.0"
     yargs "^17.0.0"
 
-"@angular/compiler@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-12.2.3.tgz#a528dcda48c17c9b844caba5b61cfd119e515d17"
-  integrity sha512-jlS7XUokGb4eH6aYEIanrq6a7ZxcMI9GmMr5tBAdIHusH3b40dcMpZVXIxoGzv1Ws47m2izDCrjWjkFKeXPavQ==
+"@angular/compiler@12.2.9":
+  version "12.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-12.2.9.tgz#f9a9426a1febb01edddedb2f881f8cdf56ff2c23"
+  integrity sha512-87Qn8HuQ+6ECUnapQxpgIvwuUs6i1oM6lmLSKrYe0/WpIzTabB30eXWCKfvqYrv516cMdrq+nLCIXJx1tPqzSw==
   dependencies:
     tslib "^2.2.0"
 
-"@angular/core@12.2.3":
-  version "12.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-12.2.3.tgz#74f53915da3134f7e3a205219107b2eb4adcf8a6"
-  integrity sha512-gv3FJPiwDKugySzPepBzXrbr8HxeK2enotEmducNv3IdtGZPS0/qrbDVt7W0woRt7BGAeWaZKEaPoFzMZeEbCw==
+"@angular/core@12.2.9":
+  version "12.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-12.2.9.tgz#66cd2268e479e6a647ad08cac45a9dbb42597736"
+  integrity sha512-RgUmn0YM4GMcViTEkWxDVGCyz8+subF+98dJie+bwJszATMxRK2TSINEg2X/Y0LgNxpRt4mKzIK2kz62oaDH7g==
   dependencies:
     tslib "^2.2.0"
 
