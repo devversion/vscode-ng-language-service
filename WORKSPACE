@@ -23,8 +23,8 @@ load("@aspect_rules_ts//ts:repositories.bzl", "rules_ts_dependencies")
 # TODO: should use version from package.json but this version isn't yet supported by aspect/rules_ts
 # rules_ts_dependencies(ts_version_from = "//:package.json")
 rules_ts_dependencies(
-    ts_version = "5.2.2",
     ts_integrity = "sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==",
+    ts_version = "5.2.2",
 )
 
 http_archive(
@@ -76,9 +76,9 @@ load("@aspect_rules_js//npm:npm_import.bzl", "npm_translate_lock")
 npm_translate_lock(
     name = "npm",
     data = [
+        "//.angular_packages/language-service:package.json",  # FOR TESTING ONLY! DO NOT COMMIT THIS LINE!
         "//:package.json",
         "//:pnpm-workspace.yaml",
-        # PLACE_HOLDER_FOR_angular/angular_packages/language-service/build.sh
     ],
     npmrc = "//:.npmrc",
     pnpm_lock = "//:pnpm-lock.yaml",

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@angular/language-service':
-        specifier: 18.1.0-next.0
-        version: 18.1.0-next.0
+        specifier: file:.angular_packages/language-service
+        version: file:.angular_packages/language-service
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -312,11 +312,6 @@ packages:
       tslib: 2.4.0
       zone.js: 0.11.8
     dev: true
-
-  /@angular/language-service@18.1.0-next.0:
-    resolution: {integrity: sha512-9kMpU+P9KY0YK56GlR6csFq/8GCZUPcTkTGwbMoOFLJCBa/y/tho9Ikl7epupl1GjaYZraKqNUxH+5z4P0DzCg==}
-    engines: {node: ^18.13.0 || >=20.9.0}
-    dev: false
 
   /@assemblyscript/loader@0.10.1:
     resolution: {integrity: sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==}
@@ -1556,7 +1551,7 @@ packages:
 
   /@bazel/typescript@5.5.0(typescript@4.7.4):
     resolution: {integrity: sha512-Ord0+nCj+B1M4NDbe0uqZf2FyOCzaDAlc4DAsr5UKJrArCipIbMTEAxlsEk+WAYBNAFGO/FS9/zlDtLceqpHqw==}
-    deprecated: No longer maintained, https://github.com/aspect-build/rules_ts is the recommended replacement
+    deprecated: This package is no longer maintained, see https://github.com/aspect-build/rules_ts for replacement
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -5614,7 +5609,7 @@ packages:
       date-format: 4.0.14
       debug: 4.3.4
       flatted: 3.3.1
-      rfdc: 1.3.1
+      rfdc: 1.4.1
       streamroller: 3.1.5
     transitivePeerDependencies:
       - supports-color
@@ -6757,6 +6752,10 @@ packages:
   /q@1.5.1:
     resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
+    deprecated: |-
+      You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
+      (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
     dev: true
 
   /qjobs@1.2.0:
@@ -7021,8 +7020,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rfdc@1.3.1:
-    resolution: {integrity: sha512-r5a3l5HzYlIC68TpmYKlxWjmOP6wiPJ1vWv2HeLhNsRZMrCkxeqxiHlQ21oXmQ4F3SiryXBHhAD7JZqvOJjFmg==}
+  /rfdc@1.4.1:
+    resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
     dev: true
 
   /rimraf@2.7.1:
@@ -8201,7 +8200,6 @@ packages:
   /vsce@1.100.1:
     resolution: {integrity: sha512-1VjLyse5g6e2eQ6jUpslu7IDq44velwF8Jy8s7ePdwGNuG8EzfmaOfVyig3ZSMJ0l8DiJmZllx5bRAB4RMdnHg==}
     engines: {node: '>= 10'}
-    deprecated: vsce has been renamed to @vscode/vsce. Install using @vscode/vsce instead.
     hasBin: true
     dependencies:
       azure-devops-node-api: 11.0.1
@@ -8744,6 +8742,12 @@ packages:
     dependencies:
       tslib: 2.4.0
     dev: true
+
+  file:.angular_packages/language-service:
+    resolution: {directory: .angular_packages/language-service, type: directory}
+    name: '@angular/language-service'
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0}
+    dev: false
 
   github.com/angular/dev-infra-private-builds/262cb3bb487e8dddb3c404f4f2c8b34a9a1f14c2(@angular/compiler-cli@14.3.0)(karma-chrome-launcher@3.2.0)(karma-firefox-launcher@2.1.3)(karma-jasmine@5.1.0)(karma-junit-reporter@2.0.1)(karma-requirejs@1.1.0)(karma-sourcemap-loader@0.4.0)(karma@6.4.3)(rxjs@6.6.7)(terser@5.8.0)(zone.js@0.11.8):
     resolution: {tarball: https://codeload.github.com/angular/dev-infra-private-builds/tar.gz/262cb3bb487e8dddb3c404f4f2c8b34a9a1f14c2}

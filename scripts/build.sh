@@ -35,4 +35,4 @@ set -ex -o pipefail
 yarn install
 
 # Build the npm package with bazel
-yarn bazel build //:npm --config=release
+bazel build //:npm --config=release

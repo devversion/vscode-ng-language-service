@@ -9,9 +9,7 @@
         "panel": "dedicated",
         "reveal": "never"
       },
-      "problemMatcher": [
-        "$tsc"
-      ]
+      "problemMatcher": ["$tsc"]
     },
     {
       "type": "npm",
@@ -37,7 +35,7 @@
     {
       "type": "shell",
       "label": "build vsix",
-      "command": "./scripts/build.sh"
+      "command": "./scripts/build.sh package.json"
     }
   ]
 }
