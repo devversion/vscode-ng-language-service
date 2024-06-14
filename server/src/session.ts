@@ -193,7 +193,7 @@ export class Session {
     conn.onCodeLensResolve(p => this.onCodeLensResolve(p));
     conn.onSignatureHelp(p => this.onSignatureHelp(p));
     conn.onCodeAction(p => this.onCodeAction(p));
-    conn.onCodeActionResolve(p => this.onCodeActionResolve(p));
+    conn.onCodeActionResolve(async p => await this.onCodeActionResolve(p));
   }
 
   private onCodeAction(params: lsp.CodeActionParams): lsp.CodeAction[]|null {
@@ -246,7 +246,7 @@ export class Session {
     }))];
   }
 
-  private onCodeActionResolve(param: lsp.CodeAction): lsp.CodeAction {
+  private async onCodeActionResolve(param: lsp.CodeAction): Promise<lsp.CodeAction> {
     const codeActionResolve = param.data as unknown as CodeActionResolveData;
 
     if (codeActionResolve.refactor === true) {
@@ -256,9 +256,19 @@ export class Session {
         return param;
       }
 
+      const progress = await this.connection.window.createWorkDoneProgress();
+      progress.begin('Running refactoring action..', 0);
+
       // Note: At this point we assume there to be always a single action for a refactor.
       const edits = lsInfo.languageService.getEditsForRefactor(filePath, defaultFormatOptions,
         codeActionResolve.range, codeActionResolve.name, codeActionResolve.name, defaultPreferences);
+
+      progress.done();
+
+      if (edits?.notApplicableReason !== undefined) {
+        this.connection.window.showErrorMessage(edits.notApplicableReason);
+      }
+
       if (!edits) {
         return param;
       }
